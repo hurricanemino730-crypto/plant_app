@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "build:web": "EXPO_PUBLIC_API_BASE_URL=https://plant-doctor-server-2cdy.onrender.com expo export -p web --clear",
-    "deploy": "npm run build:web && gh-pages -d dist"
+    "deploy": "npm run build:web && touch dist/.nojekyll && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
