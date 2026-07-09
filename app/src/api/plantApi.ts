@@ -2,10 +2,11 @@ import { DiagnosisResult, ApiError } from "../types/plant";
 
 /**
  * プロキシサーバーのURL。
- * 実機（Expo Go）で確認する場合は、PCのローカルIPに書き換えてください。
- * 例: "http://192.168.1.10:3000"
+ * ビルド時に EXPO_PUBLIC_API_BASE_URL が設定されていればそちらを優先する
+ * （GitHub Pages公開時など、公開サーバーのURLをビルドに埋め込む用途）。
+ * 未設定時はローカル開発用のIPにフォールバックする。
  */
-const API_BASE_URL = "http://192.168.40.91:3000";
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL ?? "http://192.168.40.91:3000";
 
 /** 診断APIの呼び出しに失敗したときのエラー */
 export class DiagnoseApiError extends Error {

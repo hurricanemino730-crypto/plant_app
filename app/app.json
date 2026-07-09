@@ -9,6 +9,13 @@
     "splash": {
       "backgroundColor": "#2e7d32"
     },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "experiments": {
+      "baseUrl": "/plant_app"
+    },
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
