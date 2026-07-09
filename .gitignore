@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# environment variables（APIキーは絶対にコミットしない）
+.env
+.env.local
+
+# build outputs
+dist/
+build/
+
+# Expo
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# logs
+npm-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store

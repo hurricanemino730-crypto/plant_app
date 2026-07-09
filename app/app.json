@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Plant Doctor",
+    "slug": "plant-doctor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#2e7d32"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "植物の写真を撮影して健康診断を行うためにカメラを使用します。",
+        "NSPhotoLibraryUsageDescription": "植物の写真を選択して健康診断を行うためにフォトライブラリへアクセスします。"
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "植物の写真を選択するためにフォトライブラリへアクセスします。",
+          "cameraPermission": "植物の写真を撮影するためにカメラを使用します。"
+        }
+      ]
+    ]
+  }
+}
