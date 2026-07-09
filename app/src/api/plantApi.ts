@@ -5,7 +5,7 @@ import { DiagnosisResult, ApiError } from "../types/plant";
  * 実機（Expo Go）で確認する場合は、PCのローカルIPに書き換えてください。
  * 例: "http://192.168.1.10:3000"
  */
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "http://192.168.40.91:3000";
 
 /** 診断APIの呼び出しに失敗したときのエラー */
 export class DiagnoseApiError extends Error {

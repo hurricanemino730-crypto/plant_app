@@ -17,7 +17,10 @@
       }
     },
     "android": {
-      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ]
     },
     "plugins": [
       [
@@ -26,7 +29,8 @@
           "photosPermission": "植物の写真を選択するためにフォトライブラリへアクセスします。",
           "cameraPermission": "植物の写真を撮影するためにカメラを使用します。"
         }
-      ]
+      ],
+      "expo-asset"
     ]
   }
 }
