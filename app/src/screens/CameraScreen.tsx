@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Alert,
   Image,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -75,7 +76,11 @@ export default function CameraScreen({ onDiagnosed }: Props) {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.content}
+      keyboardShouldPersistTaps="handled"
+    >
       <Text style={styles.title}>🌱 Plant Doctor</Text>
       <Text style={styles.subtitle}>植物の写真から健康状態を診断します</Text>
 
@@ -110,12 +115,13 @@ export default function CameraScreen({ onDiagnosed }: Props) {
           <Text style={styles.diagnoseText}>🔍 診断する</Text>
         )}
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: "center", padding: 20, paddingTop: 60 },
+  container: { flex: 1 },
+  content: { alignItems: "center", padding: 20, paddingTop: 60, paddingBottom: 40 },
   title: { fontSize: 28, fontWeight: "bold", color: "#2e7d32" },
   subtitle: { fontSize: 14, color: "#666", marginTop: 4, marginBottom: 20 },
   preview: { width: "100%", height: 320, borderRadius: 16, backgroundColor: "#eee" },
