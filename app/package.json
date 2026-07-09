@@ -9,7 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
-    "build:web": "expo export -p web",
+    "build:web": "EXPO_PUBLIC_API_BASE_URL=https://plant-doctor-server-2cdy.onrender.com expo export -p web --clear",
     "deploy": "npm run build:web && gh-pages -d dist"
   },
   "dependencies": {

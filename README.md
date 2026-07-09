@@ -1,5 +1,7 @@
 # 🌱 Plant Doctor — 植物健康診断アプリ
 
+**公開ページ: https://hurricanemino730-crypto.github.io/plant_app/**（Safari等のブラウザから利用可能）
+
 スマホで植物の写真を撮る・選ぶだけで、AI（Claude API）が以下を診断するオープンソースアプリです。
 
 1. **植物の名前**（和名・学名）
@@ -62,6 +64,19 @@ const API_BASE_URL = "http://192.168.x.x:3000"; // PCのIPアドレス
 ```bash
 npx expo start
 ```
+
+## Web版の公開（GitHub Pages）
+
+`app` は `react-native-web` によりWebブラウザでも動作します。サーバーは [Render](https://render.com) の無料プランにデプロイ済みです（`server` ディレクトリ、Root Directory設定、Build Command: `npm install --include=dev && npm run build`、Start Command: `npm start`、環境変数 `ANTHROPIC_API_KEY` を設定）。
+
+```bash
+cd app
+npm run deploy   # ビルド + gh-pagesブランチへデプロイ
+```
+
+`build:web` は `EXPO_PUBLIC_API_BASE_URL` を公開サーバーのURLに固定してビルドします。サーバーのURLが変わった場合は `app/package.json` の `build:web` スクリプトを更新してください。
+
+無料プランのサーバーは一定時間アクセスがないとスリープするため、初回アクセス時は診断に時間がかかることがあります。
 
 ## Expo Goでの動作確認方法
 
